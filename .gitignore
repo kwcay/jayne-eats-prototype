@@ -9,6 +9,8 @@ venv/
 # Tests & builds
 /build
 /coverage
+/data
+.pytest_cache/
 
 # Miscellaneous
 .DS_Store
