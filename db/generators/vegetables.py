@@ -1,6 +1,4 @@
 """
-VEGETABLES.py
-
 List of vegetables, roots, bulbs and edible flowers.
 """
 

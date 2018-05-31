@@ -7,9 +7,9 @@ venv/
 .vscode/
 
 # Tests & builds
+*.sqlite
 /build
 /coverage
-/data
 .pytest_cache/
 
 # Miscellaneous
