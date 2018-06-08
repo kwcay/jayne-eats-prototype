@@ -28,6 +28,6 @@ def _extract_details(details: Union[tuple, str]) -> tuple:
     elif type(details) is tuple and len(details) == 2:
         name, ingredients = details
     else:
-        raise Error('Unknown smoothie')
+        raise Exception('Unknown smoothie')
 
     return (name, ingredients)

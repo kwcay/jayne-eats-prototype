@@ -12,13 +12,7 @@ def generate(**kwargs):
     # Iterate through each generator
     for gen in generators:
         for food in gen(FoodModel):
-            # TODO: add ingredients...
-            # ...
-
-            if foods.findRecord('name', food.name) is not None:
-                print(f'"{food.name}" already exists.')
-                continue
-
+            # Create the Food record
             try:
                 print(f'Adding "{food.name}"...')
                 foods.add(food)

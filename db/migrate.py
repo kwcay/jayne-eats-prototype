@@ -22,8 +22,8 @@ def migrate(**kwargs):
     cur = conn.cursor()
 
     for table in DB_TABLES:
-        print('Creating "{}" table...'.format(table.tableName))
-        table().createTable()
+        print('Creating "{}" table...'.format(table.table_name))
+        table().create_table()
 
     conn.commit()
     cur.close()

@@ -2,19 +2,22 @@
 Provides abstract classes for models and database tables.
 """
 from sqlite3 import Connection
-from typing import Union
+from typing import Optional, Union
 from .utilities import connect, exists
 
 
 class AbstractTable:
     """Database table name."""
-    tableName = ''
+    table_name = ''
 
     """SQL create statement for database table."""
-    createStatement = ''
+    create_statement = ''
 
     """SQL create statements for indices."""
-    createIndices = []
+    create_indices = []
+
+    """Default column to use to retrieve records."""
+    lookup_col = ''
 
     def connect(self) -> Connection:
         """Connects to the SQLite database and returns the connection."""
@@ -24,28 +27,41 @@ class AbstractTable:
 
         return connect()
 
-    def createTable(self) -> True:
+    def create_table(self) -> True:
         """Executes the CREATE statement for the table."""
 
-        assert(len(self.tableName) > 0)
-        assert(len(self.createStatement) > 0)
+        assert(len(self.table_name) > 0)
+        assert(len(self.create_statement) > 0)
 
         # Connect to database and create the table.
         conn = self.connect()
         cur = conn.cursor()
-        cur.execute(self.createStatement.format(tableName=self.tableName))
+        cur.execute(self.create_statement.format(table_name=self.table_name))
 
         # Create indices, if any.
-        for stmt in self.createIndices:
-            cur.execute(stmt.format(tableName=self.tableName))
+        for stmt in self.create_indices:
+            cur.execute(stmt.format(table_name=self.table_name))
 
         return True
 
-    def findRecord(self, columnName: str, value: Union[int, str]) -> dict:
+    def all(self) -> list:
+        conn = self.connect()
+
+        with conn:
+            cur = conn.cursor()
+            cur.execute(f'SELECT * FROM {self.table_name}')
+            data = cur.fetchall()
+
+        return data
+
+    def find_record(self, value: Union[int, str], **kwargs) -> dict:
         """Retrieves a model from the database."""
 
-        assert(len(self.tableName) > 0)
-        assert(len(columnName) > 0)
+        lookup_col = kwargs.get('col', self.lookup_col)
+
+        assert(len(self.table_name) > 0)
+        assert(type(lookup_col) is str)
+        assert(len(lookup_col) > 0)
 
         if type(value) is str:
             assert(len(value) > 0)
@@ -54,7 +70,23 @@ class AbstractTable:
 
         with conn:
             cur = conn.cursor()
-            cur.execute(f'SELECT * FROM {self.tableName} WHERE {columnName} = ?', [value])
+            cur.execute(f'SELECT * FROM {self.table_name} WHERE {lookup_col} = ?', [value])
             data = cur.fetchone()
 
         return data
+
+    def get_record(self, value: Union[int, str], **kwargs) -> Optional[dict]:
+        """Retrieves a record, or creates it if it doesn't exist."""
+
+        lookup_col = kwargs.get('col', self.lookup_col)
+        record = self.find_record(value, col=lookup_col)
+
+        if (record is not None):
+            return record
+
+        if (callable(getattr(self, 'add'))):
+            record_id = self.add(value)
+
+            return self.find_record(record_id, col='id')
+
+        return None

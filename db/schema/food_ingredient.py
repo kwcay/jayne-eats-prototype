@@ -5,10 +5,10 @@ from .abstract import AbstractTable
 
 
 class FoodIngredientPivot(AbstractTable):
-    tableName = 'food_ingredient'
+    table_name = 'food_ingredient'
 
-    createStatement = """
-        CREATE TABLE {tableName} (
+    create_statement = """
+        CREATE TABLE {table_name} (
             id INTEGER PRIMARY KEY,
             food_id INTEGER NOT NULL REFERENCES foods(id),
             ingredient_id INTEGER NOT NULL REFERENCES ingredients(id)
