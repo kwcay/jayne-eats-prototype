@@ -1,37 +1,39 @@
 # Jayne Eats
 
-# Getting started
+## Getting started
 
 You'll need the following pieces of software to get started:
 
-- [Python 3.6](https://www.python.org)
+- [Docker](https://www.docker.com)
+- A POSIX-compliant terminal, such as, [Bash](https://www.gnu.org/software/bash), [cmder](https://cmder.net), [Cygwin](https://www.cygwin.com), [Visual Studio Code terminal](https://code.visualstudio.com/docs/editor/integrated-terminal) or [Zsh](https://www.zsh.org).
 
-## Setup
+Optional, but recommended:
 
-Make sure `virtualenv` is installed and setup the virtual environment:
+- [BuildKit](https://docs.docker.com/develop/develop-images/build_enhancements)
 
-    $ pip install virtualenv
-    $ virtualenv venv -p python3.6
-    $ source venv/bin/activate
+<details>
+    <summary>Building Docker image</summary>
 
-Install the Python dependencies
+```shell
+# Remove existing images, if any:
+docker rmi jayne-eats
 
-    (venv) $ pip install -r requirements.txt
+# Build Docker image:
+docker build --force-rm --tag jayne-eats .
+```
+</details>
 
-The Python environment can be deactivated with the `deactivate` command.
+## Todo list
 
-## Migrating the database
+- [ ] Frame machine learning problem.
+- [ ] Determine features to use with ML model.
+- [ ] Determine best performing models for the task.
+- [ ] Make model useable in software.
+- [ ] Build UI for making inferences using model.
+- [ ] Come up with some type of theme song.
 
-The database can be provisionned using:
+## License
 
-    (venv) $ python db/migrate.py
+[GNU General Public License v3](LICENSE)
 
-To drop the database and re-create it, use the `--force` option.
-
-## Running tests
-
-Todo...
-
-# To do list
-
-- Come up with some type of theme song.
+[Copyright &copy; Francis Amankrah](https://frnk.ca)

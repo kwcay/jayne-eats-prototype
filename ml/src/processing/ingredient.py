@@ -18,8 +18,8 @@ def process_ingredient(original: Union[list, str]) -> Union[list, str]:
     "blue cheese".
     """
     if type(original) == list:
-        return list(map(lambda i: process_ingredient(i), original))
-    
+        return list(set(map(lambda i: process_ingredient(i), original)))
+
     if type(original) != str:
         return original
     
