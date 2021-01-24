@@ -9,7 +9,8 @@ RUN apt-get update \
         python3-pip \
     && rm --force --recursive /var/lib/apt/lists/* \
     # Setup Python.
-    && ln -s /usr/bin/python3 /usr/bin/python
+    && ln -s /usr/bin/python3 /usr/bin/python \
+    && ln -s /usr/bin/pip3 /usr/bin/pip
 
 WORKDIR /jayne-eats
 

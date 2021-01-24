@@ -23,6 +23,33 @@ docker build --force-rm --tag jayne-eats .
 ```
 </details>
 
+<details>
+    <summary>Using the Docker container</summary>
+
+```shell
+# Start shell inside Docker container:
+docker run \
+    --interactive \
+    --mount type=bind,src="$(pwd)",dst=/jayne-eats \
+    --rm \
+    --tty \
+    jayne-eats
+
+# Install Python dependencies:
+pip install --requirement ml/src/requirements.txt
+```
+</details>
+
+<details>
+    <summary>Unit tests</summary>
+
+Unit tests can be run from inside the Docker container.
+
+```shell
+pytest
+```
+</details>
+
 ## Todo list
 
 - [x] Frame machine learning problem.

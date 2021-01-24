@@ -11,4 +11,4 @@ def normalize_text(text):
         .encode('ascii', 'ignore')\
         .decode('utf-8"')
 
-    return str(text)
+    return str(text).strip().lower()

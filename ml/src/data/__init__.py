@@ -1,1 +1,1 @@
-from .cheese import ALL_CHEESES
+from .cheese import CHEESES, CHEESES_NORMALIZED

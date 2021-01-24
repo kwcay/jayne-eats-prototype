@@ -2,8 +2,8 @@
 Processes ingredients.
 """
 from typing import Union
-from ..data import ALL_CHEESES
-from ..utils import normalize_text
+from ..data import CHEESES_NORMALIZED as CHEESES
+from ..utils import normalize_text as normalize
 
 
 def process_ingredient(original: Union[list, str]) -> Union[list, str]:
@@ -18,7 +18,7 @@ def process_ingredient(original: Union[list, str]) -> Union[list, str]:
     "blue cheese".
     """
     if type(original) == list:
-        return list(set(map(lambda i: process_ingredient(i), original)))
+        return sorted(list(set(map(lambda i: process_ingredient(i), original))))
 
     if type(original) != str:
         return original
@@ -31,25 +31,19 @@ def process_ingredient(original: Union[list, str]) -> Union[list, str]:
     return ingredient
 
 
-def _normalize(ingredient):
-    """Normalizes ingredients. Should always run first."""
-
-    return normalize_text(ingredient.strip().lower())
-
-
 def _cheese(ingredient):
     name = ingredient.replace('cheese', '').strip()
     disliked_cheeses = ('blue',)
 
     if name in disliked_cheeses:
         return ingredient
-    elif name in ALL_CHEESES:
+    elif name in CHEESES:
         return 'cheese'
-    
+
     return ingredient
 
 
 _PROCESSORS = (
-    _normalize,
+    normalize,
     _cheese,
 )
