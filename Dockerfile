@@ -1,7 +1,7 @@
 ARG UBUNTU_RELEASE=focal
 ARG UBUNTU_DATE=20210119
 
-FROM ubuntu:${UBUNTU_RELEASE}-${UBUNTU_DATE}
+FROM ubuntu:${UBUNTU_RELEASE}-${UBUNTU_DATE} AS dev
 
 RUN apt-get update \
     && apt-get upgrade --yes \
@@ -10,5 +10,7 @@ RUN apt-get update \
     && rm --force --recursive /var/lib/apt/lists/* \
     # Setup Python.
     && ln -s /usr/bin/python3 /usr/bin/python
+
+WORKDIR /jayne-eats
 
 ENTRYPOINT ["bash"]
