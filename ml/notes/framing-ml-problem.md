@@ -5,13 +5,13 @@ References:
 
 ## Research goal
 
-Predict whether Jayne will enjoy a given dish.
+Predict whether Jayne will enjoy a given dish or not.
 
 ##  Hypothesis
 
 Informative signals will consist of:
 
-- Ingredients including spices.
+- Ingredients.
 - Temperature (warm, room temperature, cool).
 - Consistency:
     - Crunchy

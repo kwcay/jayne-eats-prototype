@@ -25,8 +25,8 @@ docker build --force-rm --tag jayne-eats .
 
 ## Todo list
 
-- [ ] Frame machine learning problem.
-- [ ] Determine features to use with ML model.
+- [x] Frame machine learning problem.
+- [x] Determine features to use with ML model.
 - [ ] Determine best performing models for the task.
 - [ ] Make model useable in software.
 - [ ] Build UI for making inferences using model.
