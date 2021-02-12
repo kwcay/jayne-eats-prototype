@@ -5,11 +5,13 @@ export default async function reportWebVitals(onPerfEntry?: ReportHandler) {
     return;
   }
 
-  const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
+  const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import(
+    'web-vitals'
+  );
 
   getCLS(onPerfEntry);
   getFID(onPerfEntry);
   getFCP(onPerfEntry);
   getLCP(onPerfEntry);
   getTTFB(onPerfEntry);
-};
+}

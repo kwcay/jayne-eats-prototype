@@ -5,6 +5,6 @@ const GlobalStyle = createGlobalStyle`
     color: #222;
     text-align: center;
   }
-`
+`;
 
 export default GlobalStyle;
