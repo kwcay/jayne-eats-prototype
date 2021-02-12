@@ -3,6 +3,7 @@
 ## Software requirements
 
 - [Yarn](https://yarnpkg.com)
+- [Prettier](https://prettier.io/docs/en/editors.html) (for your editor)
 
 ## Running the app
 
