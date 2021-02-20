@@ -15,7 +15,8 @@ ReactDOM.render(
       <App />
     </ThemeProvider>
   </React.StrictMode>,
-  document.getElementById('jayne-eats-root')
+  document.getElementById('jayne-eats-root'),
 );
 
+// eslint-disable-next-line no-console
 reportWebVitals(console.log);

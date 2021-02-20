@@ -1,8 +1,25 @@
 {
   "extends": [
-    "react-app",
-    "react-app/jest",
+    "airbnb-typescript",
+    "airbnb/hooks",
     "prettier",
     "prettier/react"
-  ]
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "./src/setupTests.ts",
+          "**/*.test.ts",
+          "**/*.test.tsx"
+        ]
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "react/react-in-jsx-scope": "off"
+  }
 }

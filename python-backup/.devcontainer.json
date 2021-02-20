@@ -1,0 +1,18 @@
+{
+  "build": {
+    "target": "dev"
+  },
+  "dockerFile": "Dockerfile",
+  "extensions": [
+    "ms-azuretools.vscode-docker",
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "visualstudioexptteam.vscodeintellicode"
+  ],
+  "mounts": [
+    "type=bind,source=${localWorkspaceFolder},target=/jayne-eats,consistency=cached"
+  ],
+  "runArgs": ["--name=jayne-eats-vscode-container"],
+
+  "name": "jayne-eats-vscode-container"
+}
