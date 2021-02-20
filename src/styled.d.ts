@@ -6,7 +6,13 @@ declare module 'styled-components' {
     backgroundColor: Color;
     textColor: Color;
 
+    orange: Color;
+    yellow: Color;
+
     bodyFontFamily: string;
+    bodyFontSize: string;
     headingFontFamily: string;
+    inputFontFamily: string;
+    inputFontSize: string;
   }
 }

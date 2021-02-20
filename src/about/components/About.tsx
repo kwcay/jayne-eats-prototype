@@ -1,9 +1,16 @@
-import { dizzyFaceSrc, weaeryFaceSrc, Image, PageWrapper } from '../../shared';
+import {
+  dizzyFaceSrc,
+  wearyFaceSrc,
+  routes,
+  ColouredLink,
+  Image,
+  PageWrapper,
+} from '../../shared';
 
 export default function About() {
   return (
     <PageWrapper>
-      <h1>About Jayne Eats</h1>
+      <h1>Jayne Eats</h1>
       <p>
         Figuring out what Jayne likes to eat is <em>hard</em>. She doesn&apos;t
         like things with fruit in them, but she&apos;ll take you up on that
@@ -19,14 +26,16 @@ export default function About() {
         She does enjoy a good chocolate cake, provided it&apos;s drowned in
         vanilla. But forget about anything with &ldquo;chocolate
         flavouring&rdquo;...{' '}
-        <Image height="28px" width="28px" src={weaeryFaceSrc} />
+        <Image height="28px" width="28px" src={wearyFaceSrc} />
       </p>
 
       <p>
-        According to her, there&apos;s a perfectly sensible pattern in her
-        preferences. In order to test that theory, we built <em>Jayne Eats</em>,
-        an AI-powered bot.
+        In her opinion, her preferences follow a perfectly sensible pattern.{' '}
+        <em>Jayne Eats</em> is an artificially intelligent bot built precisely
+        to test that theory.
       </p>
+
+      <ColouredLink to={routes.ask()}>try it out</ColouredLink>
     </PageWrapper>
   );
 }

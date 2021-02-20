@@ -13,9 +13,15 @@ const Wrapper = styled.footer`
       margin: auto 0.5rem;
     }
   }
+
+  p {
+    font-size: 1rem;
+  }
 `;
 
 export default function Footer() {
+  const year = new Date().getFullYear();
+
   return (
     <Wrapper>
       <ul>
@@ -29,6 +35,9 @@ export default function Footer() {
           <Link to={routes.privacy()}>Privacy</Link>
         </li>
       </ul>
+      <p>
+        &copy; {year} <a href="https://kwcay.co">Kwahu &amp; Cayes</a>
+      </p>
     </Wrapper>
   );
 }
