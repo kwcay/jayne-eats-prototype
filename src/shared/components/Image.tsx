@@ -6,7 +6,7 @@ interface ImageProps {
   width: string;
 }
 
-const Image = styled.div<ImageProps>`
+const Image = styled.span<ImageProps>`
   background: transparent center center no-repeat url(${(props) => props.src});
   background-size: contain;
   display: inline-block;
