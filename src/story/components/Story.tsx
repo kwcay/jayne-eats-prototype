@@ -10,13 +10,15 @@ import {
 export default function About() {
   return (
     <PageWrapper>
-      <h1>Jayne Eats</h1>
+      <h1>The Story</h1>
+
       <p>
-        Figuring out what Jayne likes to eat is <em>hard</em>. She doesn&apos;t
-        like things with fruit in them, but she&apos;ll take you up on that
-        fruity drink anytime. If the drink is a milkshake, however, no dice.
-        That is, unless the milkshake was made with strawberries or banana, in
-        which case she <em>can&apos;t get enough</em>!
+        Figuring out what <a href="https://kwcay.co/jayne">Jayne</a> likes to
+        eat is <em>hard</em>. She doesn&apos;t like things with fruit in them,
+        but she&apos;ll take you up on that fruity drink anytime. If the drink
+        is a milkshake, however, no dice. That is, unless the milkshake was made
+        with strawberries or banana, in which case she{' '}
+        <em>can&apos;t get enough</em>!
       </p>
 
       <Image height="100px" width="100px" src={dizzyFaceSrc} />

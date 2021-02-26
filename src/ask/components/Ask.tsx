@@ -11,7 +11,7 @@ import { PageWrapper } from '../../shared';
 
 const Intro = styled.div`
   margin: 0 auto;
-  max-width: 400px;
+  max-width: 600px;
 `;
 
 const FormWrapper = styled.div`
