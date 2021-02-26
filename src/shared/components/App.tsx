@@ -9,6 +9,7 @@ import * as routes from '../routes';
 import { AboutPage } from '../../about';
 import { AskPage } from '../../ask';
 import { PrivacyPage } from '../../privacy';
+import { ProfilePage } from '../../profile';
 
 export default function JayneEatsApp() {
   return (
@@ -22,6 +23,9 @@ export default function JayneEatsApp() {
         </Route>
         <Route exact path={routes.privacy()}>
           <PrivacyPage />
+        </Route>
+        <Route exact path={routes.profile()}>
+          <ProfilePage />
         </Route>
         <Route path={routes.landing()}>
           <Redirect to={routes.about()} />

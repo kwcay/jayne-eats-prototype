@@ -32,6 +32,9 @@ export default function Footer() {
           <Link to={routes.ask()}>Ask</Link>
         </li>
         <li>
+          <Link to={routes.profile()}>Profile</Link>
+        </li>
+        <li>
           <Link to={routes.privacy()}>Privacy</Link>
         </li>
       </ul>

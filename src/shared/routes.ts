@@ -13,3 +13,7 @@ export function landing() {
 export function privacy() {
   return '/privacy';
 }
+
+export function profile() {
+  return '/profile';
+}

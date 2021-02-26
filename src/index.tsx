@@ -1,20 +1,15 @@
 import '@csstools/normalize.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ThemeProvider } from 'styled-components';
 
 import reportWebVitals from './reporting/webVitals';
 import App from './shared/components/App';
-import GlobalStyle from './shared/components/GlobalStyle';
-import theme from './shared/theme';
+import GlobalContextProvider from './shared/components/GlobalContextProvider';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <App />
-    </ThemeProvider>
-  </React.StrictMode>,
+  <GlobalContextProvider>
+    <App />
+  </GlobalContextProvider>,
   document.getElementById('jayne-eats-root'),
 );
 
