@@ -35,8 +35,8 @@ export default function Ask() {
   const reactionSetKey = JAYNE_REACTION_SET;
 
   function handleNewQuery(q: string) {
-    setQuery(q);
-    updateHistory([
+    setQuery(() => q);
+    updateHistory(() => [
       getHistoryLine('you', `Would ${name} enjoy ${q}?`),
       ...history,
     ]);
