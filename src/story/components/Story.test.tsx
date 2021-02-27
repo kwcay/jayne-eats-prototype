@@ -1,16 +1,15 @@
 import { render } from '@testing-library/react';
-import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 
-import Landing from './Landing';
+import Story from './Story';
 import { GlobalContextProvider } from '../../shared';
 
-describe('Landing', () => {
+describe('Story', () => {
   it('should render without crashing', () => {
     render(
       <MemoryRouter>
         <GlobalContextProvider>
-          <Landing />
+          <Story />
         </GlobalContextProvider>
       </MemoryRouter>,
     );

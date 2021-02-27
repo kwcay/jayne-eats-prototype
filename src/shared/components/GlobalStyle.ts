@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
     color: ${(props) => props.theme.textColor.string()};
     font-family: ${(props) => props.theme.bodyFontFamily};
     font-size: ${(props) => props.theme.bodyFontSize};
+    margin: 1rem;
     text-align: center;
   }
 

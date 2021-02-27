@@ -11,7 +11,7 @@ import { PageWrapper } from '../../shared';
 
 const Intro = styled.div`
   margin: 0 auto;
-  max-width: 400px;
+  max-width: 600px;
 `;
 
 const FormWrapper = styled.div`
@@ -35,8 +35,8 @@ export default function Ask() {
   const reactionSetKey = JAYNE_REACTION_SET;
 
   function handleNewQuery(q: string) {
-    setQuery(q);
-    updateHistory([
+    setQuery(() => q);
+    updateHistory(() => [
       getHistoryLine('you', `Would ${name} enjoy ${q}?`),
       ...history,
     ]);

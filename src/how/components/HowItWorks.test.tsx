@@ -1,13 +1,14 @@
 import { render } from '@testing-library/react';
+import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 
-import About from './About';
+import HowItWorks from './HowItWorks';
 
-describe('About', () => {
+describe('HowItWorks', () => {
   it('should render without crashing', () => {
     render(
       <MemoryRouter>
-        <About />
+        <HowItWorks />
       </MemoryRouter>,
     );
   });
