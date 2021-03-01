@@ -1,5 +1,5 @@
 /**
- * Globals variables.
+ * Globals.
  */
 declare const gapi: {
   auth2: {

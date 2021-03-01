@@ -1,4 +1,4 @@
-import { logError } from '../shared/reporting';
+import { logError } from '../shared';
 
 export function handleGoogleLogIn() {
   if (!gapi) {

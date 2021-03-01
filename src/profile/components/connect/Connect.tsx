@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
 
-import GoogleSheet from './ImportGoogleSheet';
+import ImportGoogleSheet from './ImportGoogleSheet';
 import Selector from './Selector';
 import UploadCsv from './UploadCsv';
 import { GapiAuthContext } from '../../../gapi';
@@ -11,7 +11,7 @@ export default function Connect() {
 
   switch (true) {
     case hasGapiAuth:
-      return <GoogleSheet />;
+      return <ImportGoogleSheet />;
 
     case hasCsv:
       return <UploadCsv onCancel={() => setCsv(false)} />;

@@ -3,12 +3,12 @@ import { useEffect, useState } from 'react';
 import { API_KEY, CLIENT_ID, DISCOVERY_DOCS, SCOPE } from './constants';
 import { logError } from '../shared';
 
-export default function useAuth() {
+export default function useGapiAuth() {
   const [isSignedIn, setSignedIn] = useState(false);
 
   useEffect(() => {
     if (!gapi) {
-      logError('Google API not found.');
+      logError('Google API not loaded.');
       return;
     }
 
