@@ -8,11 +8,11 @@ import { GlobalContextProvider } from '../../shared';
 describe.skip('Ask', () => {
   it('should render without crashing', () => {
     render(
-      <MemoryRouter>
-        <GlobalContextProvider>
+      <GlobalContextProvider>
+        <MemoryRouter>
           <Ask />
-        </GlobalContextProvider>
-      </MemoryRouter>,
+        </MemoryRouter>
+      </GlobalContextProvider>,
     );
   });
 });
