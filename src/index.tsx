@@ -2,9 +2,9 @@ import '@csstools/normalize.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import reportWebVitals from './reporting/webVitals';
 import App from './shared/components/App';
 import GlobalContextProvider from './shared/components/GlobalContextProvider';
+import { reportWebVitals } from './shared/reporting';
 
 ReactDOM.render(
   <GlobalContextProvider>

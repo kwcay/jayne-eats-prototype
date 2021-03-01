@@ -38,7 +38,7 @@ export default function Footer() {
       </ul>
       <ul>
         <li>
-          <Link to={routes.profile()}>Profile</Link>
+          <Link to={routes.profile('')}>Profile</Link>
         </li>
         <li>
           <Link to={routes.ask()}>Ask</Link>
