@@ -1,9 +1,17 @@
-import { PageWrapper } from '../../shared';
+import { useParams } from 'react-router-dom';
+
+import ImportProfile from './Import';
+import Summary from './Summary';
+import { IMPORT_PROFILE, ProfileAction } from '../constants';
 
 export default function About() {
-  return (
-    <PageWrapper>
-      <h1>Profile</h1>
-    </PageWrapper>
-  );
+  const { action } = useParams<{ action: ProfileAction }>();
+
+  switch (action) {
+    case IMPORT_PROFILE:
+      return <ImportProfile />;
+
+    default:
+      return <Summary />;
+  }
 }

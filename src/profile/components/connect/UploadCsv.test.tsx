@@ -1,14 +1,14 @@
 import { render } from '@testing-library/react';
 
-import App from './App';
-import GlobalContextProvider from './GlobalContextProvider';
+import UploadCsv from './UploadCsv';
+import { GlobalContextProvider } from '../../../shared';
 
 // TODO: mock Google API.
-describe.skip('App', () => {
+describe.skip('UploadCsv', () => {
   it('should render without crashing', () => {
     render(
       <GlobalContextProvider>
-        <App />
+        <UploadCsv onCancel={() => {}} />
       </GlobalContextProvider>,
     );
   });

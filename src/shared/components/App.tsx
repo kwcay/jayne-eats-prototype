@@ -12,19 +12,19 @@ export default function JayneEatsApp() {
   return (
     <Router>
       <Switch>
-        <Route exact path={routes.ask()}>
+        <Route path={routes.ask()}>
           <AskPage />
         </Route>
-        <Route exact path={routes.howItWorks()}>
+        <Route path={routes.howItWorks()}>
           <HowItWorksPage />
         </Route>
-        <Route exact path={routes.privacy()}>
+        <Route path={routes.privacy()}>
           <PrivacyPage />
         </Route>
-        <Route exact path={routes.profile()}>
+        <Route path={[routes.profile(), routes.profile('')]}>
           <ProfilePage />
         </Route>
-        <Route exact path={routes.story()}>
+        <Route path={routes.story()}>
           <StoryPage />
         </Route>
         <Route path={routes.landing()}>

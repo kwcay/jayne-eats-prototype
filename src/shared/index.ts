@@ -7,4 +7,5 @@ export { default as GlobalContextProvider } from './components/GlobalContextProv
 export { default as Image } from './components/Image';
 export { default as Input } from './components/Input';
 export { default as PageWrapper } from './components/PageWrapper';
+export { logInfo, logWarning, logError } from './reporting';
 export * as routes from './routes';

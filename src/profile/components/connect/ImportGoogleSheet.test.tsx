@@ -1,14 +1,14 @@
 import { render } from '@testing-library/react';
 
-import App from './App';
-import GlobalContextProvider from './GlobalContextProvider';
+import ImportGoogleSheet from './ImportGoogleSheet';
+import { GlobalContextProvider } from '../../../shared';
 
 // TODO: mock Google API.
-describe.skip('App', () => {
+describe.skip('ImportGoogleSheet', () => {
   it('should render without crashing', () => {
     render(
       <GlobalContextProvider>
-        <App />
+        <ImportGoogleSheet />
       </GlobalContextProvider>,
     );
   });

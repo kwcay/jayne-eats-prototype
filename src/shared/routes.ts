@@ -1,6 +1,7 @@
 /**
  * Note: these routes should be kept in sync with `public/sitemap.xml`.
  */
+import { trimEnd } from 'lodash';
 
 export function ask() {
   return '/ask';
@@ -18,8 +19,8 @@ export function privacy() {
   return '/privacy';
 }
 
-export function profile() {
-  return '/profile';
+export function profile(action = ':action') {
+  return trimEnd(`/profile/${action}`, '/');
 }
 
 export function story() {

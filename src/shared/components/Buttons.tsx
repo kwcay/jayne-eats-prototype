@@ -52,10 +52,16 @@ function narrowStyle() {
 
 export const LightButton = styled.button(baseStyle);
 
+export const NarrowLightButton = styled(LightButton)(narrowStyle);
+
 export const ColouredButton = styled(LightButton)(coloredStyle);
 
 export const NarrowColouredButton = styled(ColouredButton)(narrowStyle);
 
 export const LightLink = styled(Link)(baseStyle);
 
+export const NarrowLightLink = styled(LightLink)(narrowStyle);
+
 export const ColouredLink = styled(LightLink)(coloredStyle);
+
+export const NarrowColouredLink = styled(ColouredLink)(narrowStyle);

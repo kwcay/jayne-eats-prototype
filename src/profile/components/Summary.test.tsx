@@ -1,17 +1,16 @@
 import { render } from '@testing-library/react';
-import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 
-import Landing from './Landing';
+import Summary from './Summary';
 import { GlobalContextProvider } from '../../shared';
 
 // TODO: mock Google API.
-describe.skip('Landing', () => {
+describe.skip('Summary', () => {
   it('should render without crashing', () => {
     render(
       <GlobalContextProvider>
         <MemoryRouter>
-          <Landing />
+          <Summary />
         </MemoryRouter>
       </GlobalContextProvider>,
     );
