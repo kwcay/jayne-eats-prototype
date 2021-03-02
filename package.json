@@ -5,7 +5,8 @@
   "scripts": {
     "start": "react-scripts start",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "format": "yarn prettier --write .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "build": "react-scripts build",
     "test": "react-scripts test"
   },
