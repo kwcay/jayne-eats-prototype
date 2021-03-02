@@ -1,11 +1,7 @@
 import styled from 'styled-components';
 
-import {
-  handleGoogleLogIn,
-  NarrowColouredButton,
-  NarrowLightLink,
-  routes,
-} from '../../../shared';
+import { handleGoogleLogIn } from '../../../gapi';
+import { NarrowColouredButton, NarrowLightLink, routes } from '../../../shared';
 
 interface Props {
   onSelectCsv: () => void;

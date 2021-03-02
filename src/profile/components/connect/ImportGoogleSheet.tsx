@@ -1,7 +1,7 @@
 import ConnectWrapper from './ConnectWrapper';
 import ImportActionsWrapper from './ImportActionsWrapper';
+import { handleGoogleLogOut } from '../../../gapi';
 import {
-  handleGoogleLogOut,
   Input,
   NarrowColouredButton,
   NarrowLightButton,
