@@ -4,9 +4,9 @@ steps:
       [
         'build',
         '--build-arg',
-        'REACT_APP_GCP_API_KEY=${GCP_API_KEY}',
+        'REACT_APP_GCP_API_KEY=${_GCP_API_KEY}',
         '--build-arg',
-        'REACT_APP_GCP_CLIENT_ID=${GCP_CLIENT_ID}',
+        'REACT_APP_GCP_CLIENT_ID=${_GCP_CLIENT_ID}',
         '--tag',
         'gcr.io/kwcay/jayne-eats-prototype:latest',
         '--target',
