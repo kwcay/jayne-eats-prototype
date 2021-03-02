@@ -1,5 +1,6 @@
 # Libraries & environment
 .env
+.env.production
 node_modules/
 venv/
 
