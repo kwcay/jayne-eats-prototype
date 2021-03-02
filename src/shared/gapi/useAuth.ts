@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import { API_KEY, CLIENT_ID, DISCOVERY_DOCS, SCOPE } from './constants';
-import { logError } from '../shared';
+import { logError } from '../reporting';
 
 export default function useGapiAuth() {
   const [isSignedIn, setSignedIn] = useState(false);

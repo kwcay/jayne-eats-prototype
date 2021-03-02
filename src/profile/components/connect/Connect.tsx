@@ -3,7 +3,7 @@ import { useContext, useState } from 'react';
 import ImportGoogleSheet from './ImportGoogleSheet';
 import Selector from './Selector';
 import UploadCsv from './UploadCsv';
-import { GapiAuthContext } from '../../../gapi';
+import { GapiAuthContext } from '../../../shared';
 
 export default function Connect() {
   const hasGapiAuth = useContext(GapiAuthContext);
