@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 
 import GlobalStyle from './GlobalStyle';
 import theme from '../theme';
-import { GapiAuthContextProvider } from '../../gapi';
+import GapiAuthContextProvider from '../../gapi/components/Provider';
 
 interface Props {
   children: React.ReactNode;
