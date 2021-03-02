@@ -9,7 +9,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "test": "react-scripts test",
     "build": "react-scripts build",
-    "deploy": "gh-pages --dist build --message \"Deployed to Github pages\""
+    "deploy": "yarn build && gh-pages --dist build --message \"Deployed to Github pages\""
   },
   "dependencies": {
     "@csstools/normalize.css": "^11.0.1",

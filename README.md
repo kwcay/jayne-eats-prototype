@@ -7,12 +7,18 @@
 
 ## Running the app
 
-```bash
+```shell
 # Run the app locally
 yarn start
 
 # Run tests locally
 yarn test
+```
+
+## Deploying
+
+```shell
+yarn deploy
 ```
 
 ## License
