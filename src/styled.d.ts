@@ -11,6 +11,9 @@ declare module 'styled-components' {
 
     bodyFontFamily: string;
     bodyFontSize: string;
+    bodyFontWeight: string;
+    bodyFontWeightBold: string;
+    bodyLineHeight: string;
     headingFontFamily: string;
     inputFontFamily: string;
     inputFontSize: string;

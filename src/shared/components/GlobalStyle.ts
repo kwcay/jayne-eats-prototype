@@ -6,24 +6,21 @@ const GlobalStyle = createGlobalStyle`
     color: ${(props) => props.theme.textColor.string()};
     font-family: ${(props) => props.theme.bodyFontFamily};
     font-size: ${(props) => props.theme.bodyFontSize};
-    margin: 1rem;
+    font-variant: common-ligatures tabular-nums;
+    font-weight: ${(props) => props.theme.bodyFontWeight};
+    line-height: ${(props) => props.theme.bodyLineHeight};
+    margin: 0;
+    min-height: 100vh;
     text-align: center;
   }
 
-  a {
-    border-bottom: 1px solid ${(props) => props.theme.textColor.string()};
-    color: ${(props) => props.theme.textColor.string()};
-    text-decoration: none;
-    transition: border-bottom-width 300ms;
-
-    &:hover {
-      border-bottom-width: 3px;
-    }
+  #jayne-eats-root {
+    min-height: 100vh;
   }
 
   em {
-    font-style: normal;
-    font-variant: small-caps;
+    font-style: italic;
+    text-transform: uppercase;
   }
 
   h1, h2, h3 {

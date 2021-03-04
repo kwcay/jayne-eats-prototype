@@ -1,11 +1,15 @@
+export * as backgrounds from './assets/backgrounds';
 export { default as dizzyFaceSrc } from './assets/dizzy-face.png';
+export { default as gameDieSrc } from './assets/game-die.png';
+export { default as nutellaSrc } from './assets/nutella.png';
 export { default as potOfFoodSrc } from './assets/pot-of-food.png';
 export { default as speechBalloonSrc } from './assets/speech-balloon.png';
 export { default as wearyFaceSrc } from './assets/weary-face.png';
 export * from './components/Buttons';
 export { default as GlobalContextProvider } from './components/GlobalContextProvider';
-export { default as Image } from './components/Image';
+export { default as Image, InlineIcon } from './components/Image';
 export { default as Input } from './components/Input';
+export { default as Link, Anchor } from './components/Link';
 export { default as PageWrapper } from './components/PageWrapper';
 export * from './gapi/auth';
 export { default as GapiAuthContext } from './gapi/context';

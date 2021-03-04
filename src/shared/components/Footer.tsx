@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+import Link, { Anchor } from './Link';
 import * as routes from '../routes';
 
 const Wrapper = styled.footer`
@@ -18,7 +18,8 @@ const Wrapper = styled.footer`
     }
   }
 
-  p {
+  p,
+  p > a {
     font-size: 1rem;
   }
 `;
@@ -48,7 +49,7 @@ export default function Footer() {
         </li>
       </ul>
       <p>
-        &copy; {year} <a href="https://kwcay.co">Kwahu &amp; Cayes</a>
+        &copy; {year} <Anchor href="https://kwcay.co">Kwahu &amp; Cayes</Anchor>
       </p>
     </Wrapper>
   );

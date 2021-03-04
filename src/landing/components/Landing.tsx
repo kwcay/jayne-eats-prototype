@@ -1,38 +1,32 @@
 import styled from 'styled-components';
 
 import {
-  ColouredLink,
-  Image,
-  LightLink,
+  ColouredButtonLink,
+  LightButtonLink,
+  Link,
   PageWrapper,
-  potOfFoodSrc,
   routes,
 } from '../../shared';
 
-const ButtonsWrapper = styled.div`
-  margin: 1rem;
-
-  a {
-    margin: 1rem;
-  }
+const Intro = styled.p`
+  margin: 2rem auto;
+  max-width: 400px;
 `;
 
 export default function Landing() {
   return (
-    <PageWrapper>
+    <PageWrapper randomizeBackground>
       <h1>Jayne Eats</h1>
 
-      <p>
-        Jayne is an artificially-intelligent bot that knows what you like to
-        eat.
-      </p>
+      <Intro>
+        Jayne is an <Link to={routes.ask()}>artificially-intelligent</Link> bot
+        that knows what you like to eat.
+      </Intro>
 
-      <Image width="100px" height="100px" src={potOfFoodSrc} />
-
-      <ButtonsWrapper>
-        <ColouredLink to={routes.ask()}>try it out</ColouredLink>
-        <LightLink to={routes.story()}>learn more</LightLink>
-      </ButtonsWrapper>
+      <div>
+        <ColouredButtonLink to={routes.ask()}>try it out</ColouredButtonLink>
+        <LightButtonLink to={routes.story()}>learn more</LightButtonLink>
+      </div>
     </PageWrapper>
   );
 }
